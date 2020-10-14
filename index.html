@@ -2,11 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#1976d2" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Bansela Engage | Terms and Conditions</title>
   </head>
   <body>
     <style>
+      :root {
+        //  OWN COLORS
+        --color-gold: #f1891f;
+        --color-golg-light: #f1af29;
+        --color-blue: #011e4b;
+        --color-blue-dark: #131945;
+        --color-blue-light: #131945;
+        --color-blue-2: #131945;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+      }
+      body {
+        margin: 0;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+        height: 100%;
+        width: 100%;
+      }
       .page--terms {
         height: 100vh;
         background-color: var(--color-blue);
@@ -16,9 +59,10 @@
       h1 {
         font-size: 2em;
         font-weight: 900;
+        margin-bottom: 0.2em;
       }
       .subhead {
-        color: var(--color-gold);
+        color: #f1891f;
         /* font-weight: 900; */
       }
       .list-wrapper {
@@ -69,14 +113,45 @@
         border-radius: var(--radius);
       }
       li {
+        line-height: 142%;
         margin-bottom: 1em;
       }
       a {
-        color: var(--color-gold);
+        color: #f1891f;
+        text-decoration: none;
       }
       .inner {
         margin-top: 1em;
         margin-left: -1em;
+      }
+
+      /* Buttons and Links */
+      .btn {
+        --background: #fff;
+        height: 50px;
+        width: 100%;
+        border: 4px rgb(0, 37, 89) solid;
+        border-radius: 10px;
+        background-color: #fff;
+        color: var(--color-blue);
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .btn--outline {
+        --background: transparent;
+        border: 3px solid #fff;
+        color: #fff;
+        background-color: var(--background);
+        transition: 0.2s;
+        &:hover {
+          background-color: 0 0 0 16px rgba(255, 255, 255, 0.233);
+        }
       }
     </style>
     <div class="page page--terms">
